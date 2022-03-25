@@ -83,6 +83,22 @@ class _VehicleProp1State extends State<VehicleProp1> {
               ),
             ),
             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16,),
+              child: Row(
+                children: [
+                  Expanded(child: SvgPicture.asset("assets/images/Ellipse_76.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Rectangle_243.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Ellipse_78.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Rectangle_244.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Ellipse_78.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Rectangle_244.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Ellipse_78.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Rectangle_244.svg")),
+                  Expanded(child: SvgPicture.asset("assets/images/Ellipse_78.svg")),
+                ],
+              ),
+            ),
+            Padding(
               padding: const EdgeInsets.only(
                 left: 16,
                 right: 16,

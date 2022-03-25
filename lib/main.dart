@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasit_araniyor/screens/account/onboardingScreen.dart';
 import 'package:tasit_araniyor/screens/account/splashScreen.dart';
+import 'package:tasit_araniyor/screens/app/emptyOrNot.dart';
 
 void main() {
   runApp(const MyApp());

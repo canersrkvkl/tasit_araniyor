@@ -12,6 +12,10 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  bool sofor = false;
+  bool musteri = false;
+  bool nakliyeci = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +43,149 @@ class _SignupScreenState extends State<SignupScreen> {
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
+                ),
+              ),
+              //BUTONLAR
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    //ŞÖFÖR
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            sofor = !sofor;
+                            musteri = false;
+                            nakliyeci = false;
+                          });
+                        },
+                        child: Container(
+                          height: 90,
+                          decoration: BoxDecoration(
+                            gradient: sofor == true
+                                ? const LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                        Colors.deepPurple,
+                                        Colors.blue,
+                                      ])
+                                : LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Colors.deepPurple.withOpacity(0.4),
+                                      Colors.blue.withOpacity(0.4),
+                                    ],
+                                  ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "ŞOFÖR",
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8,),
+                    //MÜŞTERİ
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            musteri = !musteri;
+                            sofor = false;
+                            nakliyeci = false;
+                          });
+                        },
+                        child: Container(
+                          height: 90,
+                          decoration: BoxDecoration(
+                            gradient: musteri == true
+                                ? const LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                        Colors.deepPurple,
+                                        Colors.blue,
+                                      ])
+                                : LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Colors.deepPurple.withOpacity(0.4),
+                                      Colors.blue.withOpacity(0.4),
+                                    ],
+                                  ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "MÜŞTERİ",
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8,),
+                    //NAKLİYECİ
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            nakliyeci = !nakliyeci;
+                            sofor = false;
+                            musteri = false;
+                          });
+                        },
+                        child: Container(
+                          height: 90,
+                          decoration: BoxDecoration(
+                            gradient: nakliyeci == true
+                                ? const LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                        Colors.deepPurple,
+                                        Colors.blue,
+                                      ])
+                                : LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomCenter,
+                                    colors: [
+                                      Colors.deepPurple.withOpacity(0.4),
+                                      Colors.blue.withOpacity(0.4),
+                                    ],
+                                  ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "NAKLİYECİ",
+                              style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               //AD SOYAD TEXTFIELD

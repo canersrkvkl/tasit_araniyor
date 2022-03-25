@@ -12,6 +12,9 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
+  bool driverSelected = false;
+  bool transporterSelected = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,49 +42,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 const Spacer(),
                 SvgPicture.asset(
                   "assets/images/Group_24.svg",
-                  width: MediaQuery.of(context).size.width / 3,
+                  width: MediaQuery.of(context).size.width / 2,
                   height: 80,
-                ),
-                const Spacer(),
-                Container(
-                  height: 70,
-                  width: MediaQuery.of(context).size.width / 1.5,
-                  color: Colors.deepPurple.withOpacity(0.4),
-                  child: Center(
-                    child: Text(
-                      "ŞOFÖR",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                Container(
-                  height: 70,
-                  width: MediaQuery.of(context).size.width / 1.5,
-                  color: Colors.blue.withOpacity(0.4),
-                  child: Center(
-                    child: Text(
-                      "NAKLİYECİ",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
                 ),
                 const Spacer(),
                 Text(
                   "Malların hızlı, güvenli &\nemniyetli teslimatı",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
-                    color: Colors.white,
+                    color: Colors.grey,
                     fontSize: 22,
                     fontWeight: FontWeight.w400,
                   ),

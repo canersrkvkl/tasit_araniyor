@@ -84,6 +84,10 @@ flutter:
     - assets/images/clock.svg
     - assets/images/location.svg
     - assets/images/Group_370.svg
+    - assets/images/Ellipse_76.svg
+    - assets/images/Ellipse_78.svg
+    - assets/images/Rectangle_243.svg
+    - assets/images/Rectangle_244.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
